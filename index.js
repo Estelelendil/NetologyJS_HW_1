@@ -1,32 +1,19 @@
-// function chess(N){
-// q = "# ";
-// i = ' #';
-// let qq = `${q.repeat(N/2)} \n`
-// let ii = `${i.repeat(N/2)} \n`
-// console.log ((qq+ii).repeat(N/2))
-// }
-
-// chess(1)
-
-//TODO: Прочитать про fill, использовать циклы и конкатенацию
-
-function chessChess (N) {
-    let q ='#', i = ' ';
-    let ferstStr = q;
-    let secondStr = i;
-    
-    for(N; N - 1 > 0; N--){
-        debugger
-        if(ferstStr[ferstStr.length-1] == q){
-            ferstStr += i;
-            secondStr += q;
-        }
-        else if(ferstStr[ferstStr.length-1] == i){
-            ferstStr += q;
-            secondStr += i;
-        }
-        
+'use strict'
+function solveEquation(a, b, c){
+    let arr = [];
+    let d = b ** 2 - 4 * a * c;
+debugger
+    if ( d = 0) {
+        let answer = -b / (2 * a);
+    arr.push(answer);
     }
-    return `${ferstStr}\n${secondStr}`   
+    if (d > 0){
+        let answer = (-b + Math.sqrt(d) )/(2*a)
+        arr.push(answer);
+        answer = (-b - Math.sqrt(d) )/(2*a)
+        arr.push(answer);
+    }
+    return arr
 }
-console.log(chessChess(5))
+
+console.log(solveEquation(2,3,1))
