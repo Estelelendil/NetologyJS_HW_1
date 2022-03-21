@@ -1,11 +1,11 @@
 'use strict'
 function solveEquation(a, b, c){
-    let arr = [];
-    let d = b ** 2 - 4 * a * c;
-debugger
-    if ( d = 0) {
+    const arr = [];
+    const d = b ** 2 - 4 * a * c;
+
+    if ( d == 0) {
         let answer = -b / (2 * a);
-    arr.push(answer);
+        arr.push(answer);
     }
     if (d > 0){
         let answer = (-b + Math.sqrt(d) )/(2*a)
@@ -13,7 +13,7 @@ debugger
         answer = (-b - Math.sqrt(d) )/(2*a)
         arr.push(answer);
     }
-    return arr
+    return arr;
 }
 
-console.log(solveEquation(2,3,1))
+console.log(solveEquation(10,6,1));
